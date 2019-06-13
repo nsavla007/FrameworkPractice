@@ -6,19 +6,19 @@ import org.openqa.selenium.support.FindBy;
 
 public class Login {
 	
-	WebDriver driver;
+	public static WebDriver driver;
 	
 	public Login (WebDriver driver) {
 		this.driver=driver;
 	}
 	
-	@FindBy(xpath="//input[@id='email']")
+	@FindBy(xpath="//input[@name='email']")
 	public WebElement inputEmail;
 	
-	@FindBy(xpath="//input[@id='pass']")
+	@FindBy(xpath="//input[@name='pass']")
 	public WebElement inputPassword;
 	
-	@FindBy(xpath="//input[@id='u_0_2']")
+	@FindBy(xpath="//input[@type='submit']")
 	public WebElement login;
 
 	
@@ -27,9 +27,6 @@ public class Login {
 		
 	}
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
-	}
+	
 
 }
